@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUE10031 Communicative English Hub</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+      background: #f0f4f8;
+      color: #1f2328;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1a4fa0, #2d7dd2);
+      color: white;
+      padding: 32px 24px 24px;
+      text-align: center;
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    header h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+    header p { font-size: 14px; opacity: 0.88; }
+    header .meta { margin-top: 10px; font-size: 13px; opacity: 0.75; }
+
+    /* ANNOUNCEMENT BANNER */
+    .announcement-banner {
+      background: #fff8e1;
+      border-left: 5px solid #f59e0b;
+      margin: 20px 16px;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .announcement-banner strong { color: #b45309; }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #57606a;
+      padding: 0 16px;
+      margin: 24px 0 10px;
+    }
+
+    /* CLASS CARDS GRID */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 0 16px 32px;
+    }
+    @media (min-width: 480px) {
+      .cards-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .class-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 14px;
+      text-decoration: none;
+      color: #1f2328;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .class-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+    .class-card .icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .class-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .class-card .schedule { font-size: 11px; color: #57606a; }
+
+    /* Color variants */
+    .c1 { background: #dbeafe; } /* blue */
+    .c2 { background: #dcfce7; } /* green */
+    .c3 { background: #fce7f3; } /* pink */
+    .c4 { background: #fef3c7; } /* yellow */
+    .c5 { background: #ede9fe; } /* purple */
+    .c6 { background: #ffedd5; } /* orange */
+    .c7 { background: #d1fae5; } /* teal */
+    .c8 { background: #fee2e2; } /* red */
+
+    /* INFO BAR */
+    .info-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0 16px;
+      margin-bottom: 20px;
+    }
+    .info-chip {
+      background: white;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px;
+      flex: 1;
+      min-width: 130px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .info-chip .label { color: #57606a; margin-bottom: 2px; }
+    .info-chip .value { font-weight: 700; font-size: 14px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #57606a;
+      border-top: 1px solid #e5e7eb;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">SUE10031</div>
+    <h1>Communicative English Hub</h1>
+    <p>Kolej Komuniti Bandar Darulaman &nbsp;|&nbsp; Sesi II 2026/2027</p>
+    <div class="meta">Pensyarah: Amilee Ong Shiau Ling (AMI) &nbsp;|&nbsp; Unit: Pengajian Am</div>
+  </header>
+
+  <div class="announcement-banner">
+    <strong>📢 Announcement:</strong> Welcome to Semester II 2026/2027! Classes begin 28 June 2026. Please check your class page for notes and quiz links each week.
+  </div>
+
+  <div class="info-bar">
+    <div class="info-chip">
+      <div class="label">Total Classes</div>
+      <div class="value">8 Classes</div>
+    </div>
+    <div class="info-chip">
+      <div class="label">Credit Hours</div>
+      <div class="value">1 Credit</div>
+    </div>
+    <div class="info-chip">
+      <div class="label">Jam Seminggu</div>
+      <div class="value">2 Hours/Week</div>
+    </div>
+    <div class="info-chip">
+      <div class="label">Jam Keseluruhan</div>
+      <div class="value">28 Hours</div>
+    </div>
+  </div>
+
+  <div class="section-title">📚 My Classes — Select Your Class</div>
+
+  <div class="cards-grid">
+    <a class="class-card" href="stm1a.html">
+      <div class="icon c1">📘</div>
+      <h3>STM1A</h3>
+      <div class="schedule">Ahad · 8:00–10:00am</div>
+    </a>
+    <a class="class-card" href="sau1a.html">
+      <div class="icon c2">📗</div>
+      <h3>SAU1A</h3>
+      <div class="schedule">Ahad · 3:00–5:00pm</div>
+    </a>
+    <a class="class-card" href="sau2b.html">
+      <div class="icon c3">📕</div>
+      <h3>SAU2B</h3>
+      <div class="schedule">Ahad · 3:00–5:00pm</div>
+    </a>
+    <a class="class-card" href="ske1a.html">
+      <div class="icon c4">📙</div>
+      <h3>SKE1A</h3>
+      <div class="schedule">Ahad · 12:00–2:00pm</div>
+    </a>
+    <a class="class-card" href="sts1a.html">
+      <div class="icon c5">📓</div>
+      <h3>STS1A</h3>
+      <div class="schedule">Selasa · 9:00–11:00am</div>
+    </a>
+    <a class="class-card" href="ske2a.html">
+      <div class="icon c6">📔</div>
+      <h3>SKE2A</h3>
+      <div class="schedule">Rabu · 3:00–5:00pm</div>
+    </a>
+    <a class="class-card" href="ske2c.html">
+      <div class="icon c7">📒</div>
+      <h3>SKE2C</h3>
+      <div class="schedule">Rabu · 3:00–5:00pm</div>
+    </a>
+    <a class="class-card" href="ske2b.html">
+      <div class="icon c8">📃</div>
+      <h3>SKE2B</h3>
+      <div class="schedule">Khamis · 3:00–5:00pm</div>
+    </a>
+  </div>
+
+  <footer>
+    SUE10031 Communicative English &copy; 2026 &nbsp;|&nbsp; Amilee Ong Shiau Ling (AMI)
+  </footer>
+
+</body>
+</html>
